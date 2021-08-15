@@ -3,4 +3,5 @@ target_sources(FishTank PRIVATE
     Properties.cpp
 )
 
+add_subdirectory(Fish)
 add_subdirectory(State)

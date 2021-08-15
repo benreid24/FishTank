@@ -2,6 +2,8 @@
 #define STATE_FISHSTATE_HPP
 
 #include <BLIB/Engine/State.hpp>
+#include <Fish/Fish.hpp>
+#include <vector>
 
 namespace state
 {
@@ -18,7 +20,9 @@ public:
     virtual void render(bl::engine::Engine& engine, float lag) override;
 
 private:
-    FishState();
+    std::vector<fish::Fish> fish;
+
+    FishState() = default;
 };
 
 } // namespace state
