@@ -1,3 +1,3 @@
-target_sources(ProjectName PUBLIC
+target_sources(FishTank PUBLIC
     Properties.hpp
 )

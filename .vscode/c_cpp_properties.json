@@ -8,11 +8,11 @@
             "${workspaceFolder}/lib/BLIB/lib/gtest/googletest/include",
             "${workspaceFolder}/lib/BLIB/lib/gtest/googlemock/include"
         ],
-        "compiler": "C:/MinGW/mingw64/bin/g++.exe"
+        "compiler": "C:/mingw64/mingw64/bin/g++.exe"
     },
     "configurations": [
         {
-            "name": "ProjectName",
+            "name": "FishTank",
             "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "${inclpath}"
