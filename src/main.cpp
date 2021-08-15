@@ -12,11 +12,13 @@ public:
 
     virtual const char* name() const { return "DemoEngineState"; }
 
-    virtual void makeActive(bl::engine::Engine& engine) {
+    virtual void activate(bl::engine::Engine& engine) override {
         triangle.setPosition(engine.settings().videoMode().width / 2,
                              engine.settings().videoMode().height / 2);
         BL_LOG_INFO << "DemoEngineState activated";
     }
+
+    virtual void deactivate(bl::engine::Engine&) override {}
 
     virtual void update(bl::engine::Engine& engine, float dt) override {
         triangle.rotate(dt * DegPerSec);
@@ -55,7 +57,8 @@ int main() {
         bl::engine::Settings()
             .withVideoMode(sf::VideoMode(800, 600, 32))
             .withWindowStyle(sf::Style::Close | sf::Style::Titlebar)
-            .withWindowTitle("BLIB Project");
+            .withWindowTitle("BLIB Project")
+            .withWindowIcon("Resources/icon.png");
     bl::engine::Engine engine(engineSettings);
     BL_LOG_INFO << "Created engine";
 

@@ -34,7 +34,7 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "./ProjectName",
+            "command": "./FishTank",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -46,7 +46,7 @@
         {
             "label": "unit test",
             "type": "shell",
-            "command": "cd build/tests && ./ProjectName.t --gtest_color=no",
+            "command": "cd build/tests && ./FishTank.t --gtest_color=no",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -58,7 +58,7 @@
         {
             "label": "filtered tests",
             "type": "shell",
-            "command": "cd build/tests && ./ProjectName.t --gtest_filter=${input:tfilter} -v --gtest_color=no",
+            "command": "cd build/tests && ./FishTank.t --gtest_filter=${input:tfilter} -v --gtest_color=no",
             "group": {
                 "kind": "build",
                 "isDefault": true
